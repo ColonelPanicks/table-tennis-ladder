@@ -43,7 +43,7 @@ def publishToSlack(game):
                 "short": True
             })
 
-        footer = "TNTFL v3.5.0"
+        footer = "DSF Pong Ladder v1"
 
         message = {
             "attachments": [
@@ -58,6 +58,6 @@ def publishToSlack(game):
                 }
             ],
             "username": "refbot",
-            "icon_emoji": ":soccer:"
+            "icon_emoji": ":table_tennis_paddle_and_ball:"
         }
         requests.post(webhookURL, json=message)
