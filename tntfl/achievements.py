@@ -184,14 +184,6 @@ class NightOwl(Achievement):
         return d.hour < 3 or (d.hour == 3 and d.minutes == 0 and d.seconds == 0 and d.microseconds == 0)
 
 
-class Deviant(Achievement):
-    name = "Deviant"
-    description = "Play a game where != 10 goals are scored"
-
-    def applies(self, player, game, opponent, ladder):
-        return game.redScore + game.blueScore != 10
-
-
 class Dedication(Achievement):
     name = "Dedication"
     description = "Play a game at least once every 60 days for a year"
