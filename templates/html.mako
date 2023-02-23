@@ -58,11 +58,6 @@ from datetime import datetime
             <input type="text" name="bluePlayer" class="form-control blue player" placeholder="Blue">
             <script type="text/javascript">
             (function($){
-              $(".red.score").change(function() {
-                $(".blue.score").val(10 - $(".red.score").val());
-              })
-            })( jQuery );
-            (function($){
               $(".game-entry input").change(function() {
                 checkGameSubmitForm();
               })

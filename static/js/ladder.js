@@ -177,6 +177,13 @@ function checkGameSubmitForm() {
   const redScore = $('input.red.score').val();
   const blueScore = $('input.blue.score').val();
 
+  const scoreOverElevenOnePlayer = function(score1, score2) {
+    if ((score1 < 11) && (score2 < 11)) {
+        return false;
+    }
+    return true;
+  }
+
   const scoreValid = function(score) {
     if (isNaN(score)) {
       return false;
@@ -184,10 +191,7 @@ function checkGameSubmitForm() {
     if (score < 0) {
       return false;
     }
-    if (score > 10) {
-      return false;
-    }
     return true;
   }
-  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore));
+  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore) || !scoreOverElevenOnePlayer(redScore, blueScore));
 }
