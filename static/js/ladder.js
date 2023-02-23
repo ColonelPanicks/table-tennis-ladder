@@ -177,17 +177,22 @@ function checkGameSubmitForm() {
   const redScore = $('input.red.score').val();
   const blueScore = $('input.blue.score').val();
 
-  const scoreOverElevenOnePlayer = function(score1, score2) {
+  const resultValid = function(score1, score2) {
+    // At least one player scoring over 11
     if ((score1 < 11) && (score2 < 11)) {
         return false;
     }
-    return true;
-  }
 
-  const noDraw = function(score1, score2) { 
+    // No draws allowed
     if (score1 == score2 ) {
         return false;
     }
+
+    // One player wins by 2 points
+    if (( score1 - score2 < 2 ) && ( score2 - score1 < 2 )) {
+        return false;
+    }
+
     return true;
   } 
 
@@ -200,5 +205,5 @@ function checkGameSubmitForm() {
     }
     return true;
   }
-  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore) || !scoreOverElevenOnePlayer(redScore, blueScore) || !noDraw(redScore, blueScore));
+  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore) || !resultValid(redScore, blueScore));
 }
