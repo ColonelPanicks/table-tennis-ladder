@@ -104,7 +104,6 @@ rankChangeClass = "positive" if rankChange > 0 else "negative" if rankChange < 0
     <td><a href="${base}headtohead/${player.name}/${stat.opponent}/" title="Head to Head"><span class="glyphicon glyphicon-transfer"></span></a></td>
     <td class="ladder-stat">${stat.games}</td>
     <td class="ladder-stat">${stat.wins}</td>
-    <td class="ladder-stat">${stat.draws}</td>
     <td class="ladder-stat">${stat.losses}</td>
     <td class="ladder-stat">${stat.goalsFor}</td>
     <td class="ladder-stat">${stat.goalsAgainst}</td>

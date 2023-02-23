@@ -46,7 +46,6 @@ def getTrend(player):
     ladderRowTitle = ("Player will become inactive in %s day%s" % (daysToGo, "s" if daysToGo > 0 else "")) if nearlyInactive else ""
     ladderPositionCSS = utils.getRankCSS(rank, totalActivePlayers)
 
-    draws = len(player.games) - player.wins - player.losses
     goalRatio = (float(player.goalsFor) / player.goalsAgainst) if player.goalsAgainst > 0 else 0
     %>
   <tr class="${ladderRowCSS}" title="${ladderRowTitle}">
@@ -54,7 +53,6 @@ def getTrend(player):
     <td class="ladder-name"><a href="${base}player/${player.name | u}/">${player.name}</a></td>
     <td class="ladder-stat">${"{:d}".format(len(player.games))}</td>
     <td class="ladder-stat">${"{:d}".format(player.wins)}</td>
-    <td class="ladder-stat">${"{:d}".format(draws)}</td>
     <td class="ladder-stat">${"{:d}".format(player.losses)}</td>
     <td class="ladder-stat">${"{:d}".format(player.goalsFor)}</td>
     <td class="ladder-stat">${"{:d}".format(player.goalsAgainst)}</td>

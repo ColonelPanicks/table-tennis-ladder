@@ -92,9 +92,8 @@ totalActivePlayers = len(ladder.getActivePlayers())
 %if player1 and player2:
 <%
     sharedGames = utils.getSharedGames(player1, player2)
-    draws = len([g for g in sharedGames if g.redScore == g.blueScore])
     player1wins = getNumWins(player1, sharedGames)
-    player2wins = len(sharedGames) - draws - player1wins
+    player2wins = len(sharedGames) - player1wins
     player1goals = getNumGoals(player1, sharedGames)
     player2goals = getNumGoals(player2, sharedGames)
     player1yellowStripes = utils.getNumYellowStripes(player1, sharedGames)
@@ -122,7 +121,7 @@ totalActivePlayers = len(ladder.getActivePlayers())
                   <h2 class="panel-title">Statistics</h2>
                 </div>
                 <div class="panel-body">
-                  <p>Matches played: ${len(sharedGames)} (${draws} draws)</p>
+                  <p>Matches played: ${len(sharedGames)} </p>
                   <table class="table headtohead">
                     <tr>
                       <th>${player1.name}</th>
