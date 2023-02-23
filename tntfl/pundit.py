@@ -116,7 +116,7 @@ class GamesAgainst(Games):
         return None
 
 class Goals(FactChecker):
-    _description = "That game featured %s's %s goal."
+    _description = "That game featured %s's %s point."
 
     def __init__(self):
         FactChecker.__init__(self)
@@ -134,7 +134,7 @@ class Goals(FactChecker):
         return None
 
 class GoalsAgainst(Goals):
-    _description = "That game featured %s's %s goal against %s."
+    _description = "That game featured %s's %s point against %s."
 
     def __init__(self):
         Goals.__init__(self)

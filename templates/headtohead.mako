@@ -152,7 +152,7 @@ totalActivePlayers = len(ladder.getActivePlayers())
                     </tr>
                     <tr>
                       <td ${"class='red-player'" if player1goals >= player2goals else ""}>${player1goals}</td>
-                      <th>Goals</th>
+                      <th>Points</th>
                       <td ${"class='blue-player'" if player2goals >= player1goals else ""}>${player2goals}</td>
                     </tr>
                     <tr>
@@ -168,7 +168,7 @@ totalActivePlayers = len(ladder.getActivePlayers())
             ${headtoheadplayer(player2, "blue")}
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h2 class="panel-title">Goal Distribution</h2>
+                  <h2 class="panel-title">Point Distribution</h2>
                 </div>
                 <div class="panel-body">
                   <div id="histogram">

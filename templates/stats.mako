@@ -52,9 +52,9 @@ plotData = getGamesPerDay(ladder)
           <dl class="dl-horizontal">
             <dt>Total games</dt>
             <dd>${len(ladder.games)}</dd>
-            <dt>Total goals by red</dt>
+            <dt>Total points by red</dt>
             <dd>${redGoals}</dd>
-            <dt>Total goals by blue</dt>
+            <dt>Total points by blue</dt>
             <dd>${blueGoals}</dd>
             <dt>Total players</dt>
             <dd>${len(ladder.players)}</dd>

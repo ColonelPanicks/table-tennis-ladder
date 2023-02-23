@@ -85,7 +85,7 @@ totalActivePlayers = len([p for p in ladder.players.values() if ladder.isPlayerA
         <th>Losses</th>
         <th>For</th>
         <th>Against</th>
-        <th>Goal ratio</th>
+        <th>Point ratio</th>
         <th>Overrated</th>
         <th>Skill</th>
         <th>Trend</th>
