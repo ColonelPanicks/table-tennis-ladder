@@ -155,11 +155,6 @@ totalActivePlayers = len(ladder.getActivePlayers())
                       <th>Points</th>
                       <td ${"class='blue-player'" if player2goals >= player1goals else ""}>${player2goals}</td>
                     </tr>
-                    <tr>
-                      <td class="red-player">${"{:.0f}".format(10 - predict)}</td>
-                      <th>Predicted Result</th>
-                      <td class="blue-player">${"{:.0f}".format(predict)}</td>
-                    </tr>
                   </table>
                 </div>
               </div>
