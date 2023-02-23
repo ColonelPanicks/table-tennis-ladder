@@ -43,7 +43,7 @@ currentStreak = streaks['current']
 currentStreakType = streaks['currentType']
 
 overratedClass = "positive" if player.overrated() <= 0 else "negative"
-tenNilWins = utils.getNumYellowStripes(player, player.games)
+elevenNilWins = utils.getNumYellowStripes(player, player.games)
 pps = getPerPlayerStats(player)
 rank = ladder.getPlayerRank(player.name)
 redness = float(player.gamesAsRed) / len(player.games) if len(player.games) > 0 else 0
@@ -137,7 +137,7 @@ rankChangeClass = "positive" if rankChange > 0 else "negative" if rankChange < 0
             ${statBox(title="Points for", body=player.goalsFor)}
             ${statBox(title="Points against", body=player.goalsAgainst)}
             ${statBox(title="Point ratio", body=("{:.3f}".format(goalRatio)), classes=goalRatioClass)}
-            ${statBox(title="10-0 wins", body=tenNilWins)}
+            ${statBox(title="11-0 wins", body=elevenNilWins)}
           </div>
           <div class="row">
             ${statBox(title="Games today", body=player.gamesToday)}

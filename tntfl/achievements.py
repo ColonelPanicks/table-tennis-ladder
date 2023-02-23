@@ -36,13 +36,13 @@ class BeatANewbie(Achievement):
 
 class YellowStripe(Achievement):
     name = "Flawless Victory"
-    description = "Beat an opponent 10-0"
+    description = "Beat an opponent 11-0"
 
     def applies(self, player, game, opponent, ladder):
         if game.redPlayer == player.name:
-            return game.redScore == 10 and game.blueScore == 0
+            return game.redScore == 11 and game.blueScore == 0
         else:
-            return game.redScore == 0 and game.blueScore == 10
+            return game.redScore == 0 and game.blueScore == 11
 
 
 class MostlyHarmless(Achievement):

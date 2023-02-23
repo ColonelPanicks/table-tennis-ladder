@@ -147,7 +147,7 @@ totalActivePlayers = len(ladder.getActivePlayers())
                     </tr>
                     <tr>
                       <td ${"class='red-player'" if player1yellowStripes >= player2yellowStripes else ""}>${player1yellowStripes}</td>
-                      <th>10-0 Wins</th>
+                      <th>11-0 Wins</th>
                       <td ${"class='blue-player'" if player2yellowStripes >= player1yellowStripes else ""}>${player2yellowStripes}</td>
                     </tr>
                     <tr>
