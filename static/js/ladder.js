@@ -188,10 +188,22 @@ function checkGameSubmitForm() {
         return false;
     }
 
-    // One player wins by 2 points
+    // One player wins by at least 2 points
     if (( score1 - score2 < 2 ) && ( score2 - score1 < 2 )) {
         return false;
     }
+
+   // One player wins by exactly 2 points in deuce
+   if (( score1 > 11 ) || ( score2 > 11 )) {
+       if (( score1 - score2 > 2 ) || ( score2 - score1 > 2 )) {
+          return false;
+       }
+   } 
+
+   // Only score above 11 if opponent over 10 
+   if ( ( score1 - score2 > 11) || ( score2 - score1 > 11 )) {
+       return false;
+    } 
 
     return true;
   } 
