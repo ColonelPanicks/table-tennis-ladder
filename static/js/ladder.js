@@ -184,6 +184,13 @@ function checkGameSubmitForm() {
     return true;
   }
 
+  const noDraw = function(score1, score2) { 
+    if (score1 == score2 ) {
+        return false;
+    }
+    return true;
+  } 
+
   const scoreValid = function(score) {
     if (isNaN(score)) {
       return false;
@@ -193,5 +200,5 @@ function checkGameSubmitForm() {
     }
     return true;
   }
-  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore) || !scoreOverElevenOnePlayer(redScore, blueScore));
+  $('#gameFormSubmit').prop("disabled", !allFilled || !scoreValid(redScore) || !scoreValid(blueScore) || !scoreOverElevenOnePlayer(redScore, blueScore) || !noDraw(redScore, blueScore));
 }
