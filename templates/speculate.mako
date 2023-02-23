@@ -28,11 +28,6 @@ base = "../"
               <input type="text" name="redPlayer" class="form-control red player" id="spec-red-player" placeholder="Red">
               <input type="text" name="redScore" class="form-control red score" id="spec-red-score" placeholder="0" maxlength="2"> - <input type="text" id="spec-blue-score" name="blueScore" class="form-control blue score" placeholder="0" maxlength="2">
               <input type="text" name="bluePlayer" class="form-control blue player" id="spec-blue-player" placeholder="Blue">
-              <script type="text/javascript">
-                $("#spec-red-score").change(function() {
-                  $("#spec-blue-score").val(10 - $("#spec-red-score").val());
-                })
-              </script>
               <input type="hidden" name="previousGames" value="${serialisedSpecGames}" />
             </div>
             <button type="submit" class="btn btn-default">Speculate <span class="glyphicon glyphicon-triangle-right"></span></button>
