@@ -8,7 +8,7 @@ base = "../"
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h1 class="panel-title">Table Football API</h1>
+          <h1 class="panel-title">Table Tennis API</h1>
         </div>
         <div class="panel-body">
           <p>A JSON API is available for ladder data.</p>

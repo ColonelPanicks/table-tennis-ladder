@@ -9,7 +9,7 @@ from datetime import datetime
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${self.attr.title}Table Football Ladder 3.4.4</title>
+    <title>${self.attr.title}Table Tennis Ladder 3.4.4</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -42,7 +42,7 @@ from datetime import datetime
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <p class="navbar-text tntfl-header">Table Football Ladder</p>
+        <p class="navbar-text tntfl-header">Table Tennis Ladder</p>
         <ul class="nav navbar-nav">
         <li><a href="${self.attr.base}.">Home</a></li>
         <li><a href="${self.attr.base}stats/">Stats</a></li>
