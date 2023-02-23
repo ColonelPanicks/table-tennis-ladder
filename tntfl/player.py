@@ -164,7 +164,6 @@ class PerPlayerStat(object):
     skillChange = 0
     wins = 0
     losses = 0
-    draws = 0
 
     def __init__(self, opponent):
         self.opponent = opponent

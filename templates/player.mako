@@ -131,7 +131,6 @@ rankChangeClass = "positive" if rankChange > 0 else "negative" if rankChange < 0
             ${statBox(title="Total games", body=len(player.games))}
             ${statBox(title="Wins", body=player.wins)}
             ${statBox(title="Losses", body=player.losses)}
-            ${statBox(title="Draws", body=(len(player.games) - player.wins - player.losses))}
           </div>
           <div class="row">
             ${statBox(title="Points for", body=player.goalsFor)}
@@ -180,7 +179,6 @@ rankChangeClass = "positive" if rankChange > 0 else "negative" if rankChange < 0
                 <th></th>
                 <th>Games</th>
                 <th>Wins</th>
-                <th>Draws</th>
                 <th>Losses</th>
                 <th>Points scored</th>
                 <th>Points conceded</th>
