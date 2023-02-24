@@ -29,6 +29,9 @@ cat << EOF > /root/TNTFL-web/start.sh
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR
 
+export SLACK_WEBHOOK_URL=SLACK_WEBHOOK_URL
+export TNTFL_ROOT_URL=http://LADDER_IP_OR_URL/ # Must start with http/https and end with a slash
+
 source pyenv/bin/activate
 python wsgi.py
 EOF
